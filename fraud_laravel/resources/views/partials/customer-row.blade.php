@@ -1,0 +1,15 @@
+<tr class="{{ $customer['fraudReason'] ? 'bg-red-400 text-white' : 'dark:bg-gray-800' }} border-b dark:border-gray-700">
+    @include('partials.customer-cell', ['value' => $customer['customerId']])
+    @include('partials.customer-cell', ['value' => $customer['bsn']])
+    @include('partials.customer-cell', ['value' => $customer['firstName']])
+    @include('partials.customer-cell', ['value' => $customer['lastName']])
+    @include('partials.customer-cell', ['value' => $customer['dateOfBirth']])
+    @include('partials.customer-cell', ['value' => $customer['phoneNumber']])
+    @include('partials.customer-cell', ['value' => $customer['email']])
+    @include('partials.customer-cell', ['value' => $customer['tag']])
+    @include('partials.customer-cell', ['value' => $customer['ipAddress']])
+    @include('partials.customer-cell', ['value' => $customer['iban']])
+    @include('partials.customer-cell', ['value' => $customer['lastInvoiceDate']])
+    @include('partials.customer-cell', ['value' => $customer['lastLoginDateTime']])
+    @include('partials.customer-cell', ['value' => $customer['fraudReason']])
+</tr>

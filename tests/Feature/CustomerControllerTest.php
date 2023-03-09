@@ -35,7 +35,7 @@ it('returns a list of customers', function () {
     ];
 
     Http::fake([
-        'localhost:8081/api/v1/customers' => Http::response(['customers' => $customers], 200)
+        'localhost:8080/api/v1/customers' => Http::response(['customers' => $customers], 200)
     ]);
 
     // Call the getCustomers method on the CustomerController
@@ -47,7 +47,7 @@ it('returns a list of customers', function () {
 });
 
 it('returns the error view when the API request fails', function () {
-    Http::fake(['localhost:8081/api/v1/customers' => Http::response(['message' => 'Bad Request'], 404)]);
+    Http::fake(['localhost:8080/api/v1/customers' => Http::response(['message' => 'Bad Request'], 404)]);
 
     // Call the getCustomers method on the CustomerController
     $controller = new CustomerController;

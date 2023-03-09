@@ -16,7 +16,7 @@ enum FraudReason: string {
 
 class FraudDetectionController extends Controller
 {
-    public function fraudCheck(CustomerController $customerController, array $customers)
+    public function fraudCheck(CustomerController $customerController, array $customers = null)
     {
         $customers = $customers ?? $customerController->getCustomers();
         $customerCollection = collect($customers);
